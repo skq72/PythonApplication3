@@ -5,7 +5,7 @@
     <ProjectGuid>8d0a6bf9-148b-4c4c-8fba-2bcdc1220a9b</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>6,1.py</StartupFile>
+    <StartupFile>module1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="6,1.py" />
+    <Compile Include="sonastik.py" />
+    <Compile Include="module1.py" />
     <Compile Include="näidis.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
