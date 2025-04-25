@@ -1,6 +1,6 @@
 
 from random import*
-
+import random
 sõnastik = {
     'koer': 'собака',
     'kass': 'кошка',
@@ -55,36 +55,20 @@ def parandsõna(sõnastik):
        print(sõnastik)
              
 def test(sõnastik):
-
-    kus_vas = sõnastik
-    print(kus_vas["koer"])   
-    kysimused=list(kus_vas.keys())
-    while True:
-        n=randint(0, len(sõnastik)-1)
-        valitud_kysimus=kysimused[n]
-        print(valitud_kysimus)
-        vastus=input("Sisesta vastus:")
-        if kus_vas[valitud_kysimus].lower()==vastus.lower():
+    õiged=0
+    sõnastik_random=list(sõnastik.items())
+    random.shuffle(sõnastik_random)
+    for eesti_sõna, vene_sõna in sõnastik_random:
+        vastus=input(f"Tõlgi sõna {eesti_sõna}:").lower()
+        if vastus==vene_sõna.lower():
             print("Õige vastus")
-        elif kus_vas[valitud_kysimus].lower()==0:
-            break
+            õiged+=1
         else:
-            print("Vale vastus")
+            print(f"Vale vastus!Õige oli:{vene_sõna}")
+    print(f"\nSinu tulemus:{õiged}/{len(sõnastik)} õigesti.")
 
-# -----------
-#     print(kus_vas["kass"])   
-#     kysimused=list(kus_vas.keys())
-#     while True:
-#         n=randint(1, len(sõnastik)0)
-#         valitud_kysimus=kysimused[n]
-#         print(valitud_kysimus)
-#         vastus=input("Sisesta vastus:")
-#         if kus_vas[valitud_kysimus].lower()==vastus.lower():
-#             print("Õige vastus")
-#         elif kus_vas[valitud_kysimus].lower()==1:
-#             break
-#         else:
-#             print("Vale vastus")
+
+
 
 
 
