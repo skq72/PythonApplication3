@@ -54,7 +54,12 @@ def parandsõna(sõnastik):
        print("Tõlge on muudatud")
        print(sõnastik)
              
+                
+
+
+
 def test(sõnastik):
+
     õiged=0
     sõnastik_random=list(sõnastik.items())
     random.shuffle(sõnastik_random)
@@ -66,7 +71,6 @@ def test(sõnastik):
         else:
             print(f"Vale vastus!Õige oli:{vene_sõna}")
     print(f"\nSinu tulemus:{õiged}/{len(sõnastik)} õigesti.")
-
 
 
 
